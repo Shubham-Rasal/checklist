@@ -63,22 +63,25 @@ function Checklist() {
   }
 
   return (
-    <div>
-      <div>
-        <p>
+    <div className="flex justify-center flex-col items-center">
+        <h1 className="mb-10 text-6xl font-bold">
+          Prathamesh's Checklist
+        </h1>
+      <div className="bg-sky-100 w-80 flex flex-col p-7 rounded-lg">
+        <p className="flex font-bold">
           <ListBulletIcon className="mr-3 h-5 w-5" />
           Checklist
         </p>
 
         
-        <div ref={ref} className="mt-4">
+        <div ref={ref} className="mt-4 flex flex-col">
           {items.map((item) => (
             <label
               key={item.id}
               className={`${
                 item.checked
                   ? "text-gray-400 line-through"
-                  : "text-gray-800"
+                  : "text-black"
               }`}
             >
               <input
